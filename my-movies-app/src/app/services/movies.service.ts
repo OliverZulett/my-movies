@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from '../shared/models/user.mode';
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +12,13 @@ export class MoviesService {
 
   getMovies() {
     return this.http.get(this.MOVIES_API_URL);
+  }
+
+  postUser(user: User) {
+    return this.http.post(`${this.MOVIES_API_URL}/users`, user);
+  }
+
+  getUsers() {
+    return this.http.get(`${this.MOVIES_API_URL}/users`);
   }
 }

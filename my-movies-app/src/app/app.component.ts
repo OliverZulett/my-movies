@@ -16,5 +16,12 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.moviesService.getMovies()
       .subscribe(console.log);
+    
+    this.moviesService.postUser({
+      email: Math.random().toString(),
+      name: Math.random().toString()
+    }).subscribe(console.log);
+    
+    this.moviesService.getUsers().subscribe(console.log);
   }
 }

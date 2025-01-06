@@ -1,0 +1,15 @@
+services:
+  mongodb:
+    image: mongo:6.0.8
+    container_name: my-movies-db
+    ports:
+      - 27017:27017
+    volumes:
+      - my_movies_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+
+volumes:
+  my_movies_data:
+    driver: local
