@@ -3,7 +3,7 @@ services:
     image: mongo:6.0.8
     container_name: my-movies-db
     ports:
-      - 27017:27017
+      - 60160:27017
     volumes:
       - my_movies_data:/data/db
     environment:

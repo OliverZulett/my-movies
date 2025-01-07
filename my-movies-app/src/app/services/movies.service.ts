@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../shared/models/user.mode';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
-  private MOVIES_API_URL = "http://localhost:6060";
+  private MOVIES_API_URL = environment.moviesApi;
 
   constructor(private http: HttpClient) { }
 

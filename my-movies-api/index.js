@@ -9,7 +9,7 @@ app.use(express.json())
 
 const port = 6060;
 
-const mongoUrl = 'mongodb://admin:password123@localhost:27017';
+const mongoUrl = 'mongodb://admin:password123@localhost:60160';
 mongoose.connect(mongoUrl);
 
 mongoose.connection.on('connected', () => {
